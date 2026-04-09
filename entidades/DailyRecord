@@ -1,0 +1,61 @@
+{
+  "name": "DailyRecord",
+  "type": "object",
+  "properties": {
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Data do registro"
+    },
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo da atividade"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "trabalho",
+        "pessoal",
+        "sa\u00fade",
+        "estudos",
+        "finan\u00e7as",
+        "outro"
+      ],
+      "description": "Categoria da atividade"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pendente",
+        "em_progresso",
+        "conclu\u00eddo",
+        "cancelado"
+      ],
+      "default": "pendente",
+      "description": "Status da atividade"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "baixa",
+        "m\u00e9dia",
+        "alta"
+      ],
+      "default": "m\u00e9dia",
+      "description": "Prioridade"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Observa\u00e7\u00f5es"
+    },
+    "value": {
+      "type": "number",
+      "description": "Valor num\u00e9rico opcional (horas, quantidade, etc)"
+    }
+  },
+  "required": [
+    "date",
+    "title",
+    "category"
+  ]
+}
